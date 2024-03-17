@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Noise Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Notes
 
-Currently, two official plugins are available:
+Five basic colors of noise have an intensity profile ($I$) proportional to a power of frequency ($f$):
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Brown ($I\sim f^{-2}$)
+2. Pink ($I\sim f^{-1}$)
+3. White ($I\sim f^0$)
+4. Blue ($I\sim f^1$)
+5. Violet ($I\sim f^2$)
 
-## Expanding the ESLint configuration
+Later, I can add support for grey noise (inverted A-weighting curves), velvet noise (sparse impulses), and green noise ((Gaussian?) filtered white noise around 500Hz)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+I also want to include sinusoidal intensity modulation and random intensity modulation.
 
-- Configure the top-level `parserOptions` property like this:
+### Sinusoidal Intensity Modulation (Wave Effect)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Configurations:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Relative intensity/amplitude of wave
+2. Period of wave
+3. Triangular wave/sinusoidal wave/trapezoidal wave/square wave
+
+### Random Intensity Modulation ()
