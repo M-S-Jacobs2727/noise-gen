@@ -66,7 +66,6 @@ export function Home() {
         />
         {ranges.map(range =>
             <Slider
-                enabled={wavesEnabled}
                 label={range.label}
                 value={range.value}
                 setValue={range.setter} />
