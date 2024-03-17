@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Stack, Form } from "react-bootstrap";
+import { Stack, Form, Button, Collapse } from "react-bootstrap";
 
 import { ColorSelector } from "../components/ColorSelector";
 import { Slider } from "../components/Slider";
@@ -70,5 +70,14 @@ export function Home() {
                 value={range.value}
                 setValue={range.setter} />
         )}
+
+        <Stack direction="horizontal" className="justify-content-around">
+            <Button>Download</Button>
+            <Button
+                variant="outline-primary"
+            >
+                Copy URL
+            </Button>
+        </Stack>
     </Stack >
 }
