@@ -64,12 +64,16 @@ export function Home() {
             checked={wavesEnabled}
             onChange={() => setWavesEnabled(!wavesEnabled)}
         />
+        <Collapse in={wavesEnabled}>
+            <Stack gap={1}>
         {ranges.map(range =>
             <Slider
                 label={range.label}
                 value={range.value}
                 setValue={range.setter} />
         )}
+            </Stack>
+        </Collapse>
 
         <Stack direction="horizontal" className="justify-content-around">
             <Button>Download</Button>
