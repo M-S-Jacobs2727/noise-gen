@@ -47,7 +47,7 @@ export function Home() {
         },
     ]
 
-    return <Stack gap={3} className="col-sm-8 col-md-6 col-lg-4 mx-auto">
+    return <Stack gap={3} className="col-sm-8 col-md-6 col-lg-4 mx-auto mt-3">
         <h1 className="mx-auto">Noise Generator</h1>
         <Form.Check
             type="switch"
@@ -66,12 +66,12 @@ export function Home() {
         />
         <Collapse in={wavesEnabled}>
             <Stack gap={1}>
-        {ranges.map(range =>
-            <Slider
-                label={range.label}
-                value={range.value}
-                setValue={range.setter} />
-        )}
+                {ranges.map(range =>
+                    <Slider
+                        label={range.label}
+                        value={range.value}
+                        setValue={range.setter} />
+                )}
             </Stack>
         </Collapse>
 
